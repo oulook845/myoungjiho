@@ -1230,6 +1230,20 @@
       transform: translateY(-80%);
     }
   }
+  .con3 .con3_site .go_site{
+    display: inline-block;
+    color:#fff;
+    margin-top: 30px;
+    padding:10px;
+    background:#999;
+    border:2px solid #fff;
+    border-radius: 20px;
+  }
+  .con3 .con3_site .go_site:hover{
+    color:#000;
+    background:#fff;
+    border:2px solid #999;
+  }
 
   /* con4 */
   .con4 {
@@ -1804,6 +1818,20 @@
   /* con3 mobile view */
   .con3 .conwrap .mbView {
     display: none;
+  }
+  .con3 .con3_site .go_site{
+    display: inline-block;
+    color:#fff;
+    margin-top: 30px;
+    padding:10px;
+    background:#999;
+    border:2px solid #fff;
+    border-radius: 20px;
+  }
+  .con3 .con3_site .go_site:hover{
+    color:#000;
+    background:#fff;
+    border:2px solid #999;
   }
 
   /* con4 */
