@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 html {
   font-size: 16px;
@@ -1661,6 +1662,16 @@ a {
     background: linear-gradient(to top left, #0d5682 80%, #3d9dd8 80%);
     border-color: #3d9dd8;
   }
+  .con3 .inner .con3_site li .skills .skill_illust{
+    color: #f37300;
+    background: #261300;
+    border-color: #f37300;
+  }
+  .con3 .inner .con3_site li .skills .skill_photoshop{
+    color: #2fa3f7;
+    background: #001d34;
+    border-color: #2fa3f7;
+  }
 
   /* con3 conwrap */
   .con3 .conwrap {
@@ -1712,11 +1723,8 @@ a {
     animation:con3_pcView 40s infinite linear;
   }
   @keyframes con3_pcView{
-    10%{
+    0%{
       transform: translateY(0%);
-    }
-    90%{
-      transform: translateY(-80%);
     }
     100%{
       transform: translateY(-80%);
@@ -1764,11 +1772,8 @@ a {
     animation:con3_mobileView 40s infinite linear;
   }
   @keyframes con3_mobileView{
-    10%{
+    0%{
       transform: translateY(0%);
-    }
-    90%{
-      transform: translateY(-80%);
     }
     100%{
       transform: translateY(-80%);
