@@ -244,15 +244,17 @@ $(function () {
     $(".con3 .pcInner li").eq(con3_selectIndex).addClass("on");
     $(".con3 .mbInner li").removeClass("on");
     $(".con3 .mbInner li").eq(con3_selectIndex).addClass("on");
+
+    // 모바일 화면 안보이기
+    $(".con3 .mbView").addClass("none");
+    if($(".con3 .con3_nav li").eq(0).hasClass("on")){
+      $(".con3 .mbView").removeClass("none");
+    }else{
+      $(".con3 .mbView").addClass("none");
+    }
   });
 
-  // 모바일 화면 안보이기
-  $(".con3 .mbView").addClass("none");
-  if($(".con3 .con3_nav li").eq(0).hasClass("on")){
-    $(".con3 .mbView").removeClass("none");
-  }else{
-    $(".con3 .mbView").addClass("none");
-  }
+  
 
   //con4
   $(".con4 .txt_wrap .txt_box li").mouseenter(function () {
