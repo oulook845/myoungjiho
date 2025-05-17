@@ -9,8 +9,6 @@ $(function () {
   //visaul animation start
   $("#visual").addClass("on");
   $("#con1").addClass("on");
-  $("#con2 .inner > ul li").eq(0).addClass("on");
-  $(".con2").addClass("on");
   $(".con3").addClass("on");
   $(".con4").addClass("on");
   // console.log("hello");
@@ -19,49 +17,49 @@ $(function () {
   if (window_width >= 1024) {
     //스크롤 이벤트
     // 개별적으로 Wheel 이벤트 적용
-    let elm = "body section";
-    $(elm).each(function (index) {
-      // 개별적으로 Wheel 이벤트 적용
-      $(this).on("mousewheel DOMMouseScroll", function (e) {
-        e.preventDefault();
-        var delta = 0;
-        if (!event) event = window.event;
-        if (event.wheelDelta) {
-          delta = event.wheelDelta / 120;
-          if (window.opera) delta = -delta;
-        } else if (event.detail) delta = -event.detail / 3;
-        var moveTop = $(window).scrollTop();
-        var elmSelecter = $(elm).eq(index);
-        // 마우스휠을 위에서 아래로
-        if (delta < 0) {
-          if ($(elmSelecter).next() != undefined) {
-            try {
-              moveTop = $(elmSelecter).next().offset().top;
-            } catch (e) {}
-          }
-          // 마우스휠을 아래에서 위로
-        } else {
-          if ($(elmSelecter).prev() != undefined) {
-            try {
-              moveTop = $(elmSelecter).prev().offset().top;
-            } catch (e) {}
-          }
-        }
+    // let elm = "body section";
+    // $(elm).each(function (index) {
+    //   // 개별적으로 Wheel 이벤트 적용
+    //   $(this).on("mousewheel DOMMouseScroll", function (e) {
+    //     e.preventDefault();
+    //     var delta = 0;
+    //     if (!event) event = window.event;
+    //     if (event.wheelDelta) {
+    //       delta = event.wheelDelta / 120;
+    //       if (window.opera) delta = -delta;
+    //     } else if (event.detail) delta = -event.detail / 3;
+    //     var moveTop = $(window).scrollTop();
+    //     var elmSelecter = $(elm).eq(index);
+    //     // 마우스휠을 위에서 아래로
+    //     if (delta < 0) {
+    //       if ($(elmSelecter).next() != undefined) {
+    //         try {
+    //           moveTop = $(elmSelecter).next().offset().top;
+    //         } catch (e) {}
+    //       }
+    //       // 마우스휠을 아래에서 위로
+    //     } else {
+    //       if ($(elmSelecter).prev() != undefined) {
+    //         try {
+    //           moveTop = $(elmSelecter).prev().offset().top;
+    //         } catch (e) {}
+    //       }
+    //     }
 
-        // 화면 이동 0.8초(800)
-        $("html,body")
-          .stop()
-          .animate(
-            {
-              scrollTop: moveTop + "px",
-            },
-            {
-              duration: 800,
-              complete: function () {},
-            }
-          );
-      });
-    });
+    //     // 화면 이동 0.8초(800)
+    //     $("html,body")
+    //       .stop()
+    //       .animate(
+    //         {
+    //           scrollTop: moveTop + "px",
+    //         },
+    //         {
+    //           duration: 800,
+    //           complete: function () {},
+    //         }
+    //       );
+    //   });
+    // });
 
     $("#visual .circle .inner").mouseup(function () {
       $("#visual .circle .mouse").css({
@@ -130,50 +128,50 @@ $(function () {
     });
 
     //scroll toggleClass
-    window.addEventListener("scroll", () => {
-      let viewPoint = $(this).scrollTop();
-      let visualTop = $("#visual").offset().top,
-        con1Top = $(".con1").offset().top,
-        con2Top = $(".con2").offset().top,
-        con3Top = $(".con3").offset().top,
-        con4Top = $(".con4").offset().top;
-      if (viewPoint >= visualTop && viewPoint < con1Top) {
-        $(".scroll_nav span").removeClass("on");
-        $(".scroll_nav span").eq(0).addClass("on");
-      } else if (viewPoint >= con1Top && viewPoint < con2Top) {
-        $(".scroll_nav span").removeClass("on");
-        $(".scroll_nav span").eq(1).addClass("on");
+    // window.addEventListener("scroll", () => {
+    //   let viewPoint = $(this).scrollTop();
+    //   let visualTop = $("#visual").offset().top,
+    //     con1Top = $(".con1").offset().top,
+    //     con2Top = $(".con2").offset().top,
+    //     con3Top = $(".con3").offset().top,
+    //     con4Top = $(".con4").offset().top;
+    //   if (viewPoint >= visualTop && viewPoint < con1Top) {
+    //     $(".scroll_nav span").removeClass("on");
+    //     $(".scroll_nav span").eq(0).addClass("on");
+    //   } else if (viewPoint >= con1Top && viewPoint < con2Top) {
+    //     $(".scroll_nav span").removeClass("on");
+    //     $(".scroll_nav span").eq(1).addClass("on");
 
-        $(".con1").addClass("on");
-      } else if (viewPoint >= con2Top && viewPoint < con3Top) {
-        $(".scroll_nav span").removeClass("on");
-        $(".scroll_nav span").eq(2).addClass("on");
-        $(".con2 .inner > ul li").removeClass("on");
-        $(".con2 .inner > ul li").eq(0).addClass("on");
+    //     $(".con1").addClass("on");
+    //   } else if (viewPoint >= con2Top && viewPoint < con3Top) {
+    //     $(".scroll_nav span").removeClass("on");
+    //     $(".scroll_nav span").eq(2).addClass("on");
+    //     $(".con2 .inner > ul li").removeClass("on");
+    //     $(".con2 .inner > ul li").eq(0).addClass("on");
 
-        $(".con2").addClass("on");
-      } else if (viewPoint >= con3Top && viewPoint < con4Top) {
-        $(".scroll_nav span").removeClass("on");
-        $(".scroll_nav span").eq(3).addClass("on");
+    //     $(".con2").addClass("on");
+    //   } else if (viewPoint >= con3Top && viewPoint < con4Top) {
+    //     $(".scroll_nav span").removeClass("on");
+    //     $(".scroll_nav span").eq(3).addClass("on");
 
-        $(".con3").addClass("on");
-      } else if (viewPoint >= con4Top) {
-        $(".scroll_nav span").removeClass("on");
-        $(".scroll_nav span").eq(4).addClass("on");
+    //     $(".con3").addClass("on");
+    //   } else if (viewPoint >= con4Top) {
+    //     $(".scroll_nav span").removeClass("on");
+    //     $(".scroll_nav span").eq(4).addClass("on");
 
-        $(".con4").addClass("on");
-      }
+    //     $(".con4").addClass("on");
+    //   }
 
-      // scroll_nav 클릭시 이동
-      $(".scroll_nav span").on("click", function () {
-        target = $(this).children("a").attr("href");
-        targetpos = $(target).offset().top;
-        movescroll(targetpos);
-      });
-      function movescroll(targetpos) {
-        $("html, body").stop().animate({ scrollTop: targetpos }, 1000);
-      }
-    });
+    //   // scroll_nav 클릭시 이동
+    //   $(".scroll_nav span").on("click", function () {
+    //     target = $(this).children("a").attr("href");
+    //     targetpos = $(target).offset().top;
+    //     movescroll(targetpos);
+    //   });
+    //   function movescroll(targetpos) {
+    //     $("html, body").stop().animate({ scrollTop: targetpos }, 1000);
+    //   }
+    // });
   }
 
   ///////////////////////////////////////////////////////////
@@ -208,27 +206,6 @@ $(function () {
   $(".con1 .character").draggable({
     axis: "x",
     containment: ".con1",
-  });
-
-  // con2
-  $(".con2 ul li").click(function () {
-    $(".con2 ul li").removeClass("on");
-    $(this).toggleClass("on");
-  });
-  $(".con2 ul li").mousedown(function () {
-    $(this).css({
-      border: "15px solid #fff",
-    });
-  });
-  $(".con2 ul li").mouseup(function () {
-    $(this).css({
-      border: "0px solid #fff",
-    });
-  });
-  $(".con2 ul li").mouseleave(function () {
-    $(this).css({
-      border: "0px solid #fff",
-    });
   });
 
   // con3
