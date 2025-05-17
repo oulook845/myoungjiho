@@ -664,346 +664,6 @@ a {
     border-color: #ff8ae1;
   } */
 
-  /* con1 character */
-  .con1 .character {
-    width: 25%;
-    height: 650px;
-    /* max-height: 650px;
-    min-height: 650px; */
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-
-    position: absolute;
-    bottom: 10%;
-    left: 20%;
-    transform: translateY(7%);
-    z-index: 50;
-  }
-  .con1.on .character {
-    animation: characMove 0.5s forwards;
-    animation-delay: 0.3s;
-  }
-  @keyframes characMove {
-    0% {
-      bottom: 10%;
-      transform: translateY(7%);
-    }
-    100% {
-      transform: translateY(0%);
-      bottom: 5%;
-    }
-  }
-
-  .con1 .character .charac_wrap {
-    width: 50%;
-    height: 90%;
-    position: relative;
-    transform: translateY(-110%);
-    transition: 0.5s;
-    z-index: 99;
-    cursor: grab;
-  }
-
-  .con1.on .character .charac_wrap {
-    animation: charac_wrapMove 0.5s ease-in-out forwards;
-  }
-  @keyframes charac_wrapMove {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-
-  .con1 .character .charac_wrap.on {
-    top: -5%;
-    cursor: grabbing;
-  }
-  .con1 .character .charac_wrap .charac_head {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    border: 3px solid #000;
-    background: #fff;
-
-    position: absolute;
-    bottom: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .con1.on .character .charac_wrap .charac_head {
-    animation: con1_charac_click 1.5s linear infinite;
-  }
-  @keyframes con1_charac_click {
-    0% {
-      bottom: 65%;
-    }
-    50% {
-      bottom: 63%;
-    }
-    100% {
-      bottom: 65%;
-    }
-  }
-
-  .con1 .character .charac_wrap .charac_head .hat {
-    width: 120%;
-    height: 4px;
-    max-height: 6px;
-
-    position: absolute;
-    top: 35%;
-    right: 2%;
-    background: #000;
-    transform-origin: right bottom;
-    transform: rotate(10deg);
-    user-select: none;
-  }
-  .con1 .character .charac_wrap .charac_head .face {
-    width: 70%;
-    height: 50%;
-
-    position: absolute;
-    bottom: 0%;
-    left: 5%;
-    transform: translateY(-50%);
-  }
-  .con1 .character .charac_wrap .charac_head .face .eyes {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-
-    position: relative;
-  }
-  .con1 .character .charac_wrap .charac_head .face .eyes p {
-    width: 100%;
-    height: 100%;
-    max-width: 50px;
-    max-height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    border-radius: 50%;
-    background: #fff;
-    border: 3px solid #000;
-    transform: translateY(-50%);
-  }
-  .con1.on .character .charac_wrap .charac_head .face .eyes p {
-    animation: eyesClose 5s linear infinite;
-  }
-  .con1 .character .charac_wrap.on .charac_head .face .eyes p span {
-    transform: scale(0.5);
-    transition: 0.2s;
-  }
-
-  .con1 .character .charac_wrap .charac_head .face .eyes .left {
-    top: 50%;
-    left: 0;
-  }
-  .con1 .character .charac_wrap .charac_head .face .eyes .right {
-    top: 50%;
-    right: 0;
-  }
-  .con1 .character .charac_wrap .charac_head .face .eyes span {
-    width: 40%;
-    height: 40%;
-    max-width: 70px;
-    max-height: 70px;
-
-    border-radius: 50%;
-    background: #000;
-    display: block;
-  }
-  .con1 .character .charac_wrap .charac_head .face .eyes .left span {
-    transform: translate(30%, 20%);
-  }
-  .con1 .character .charac_wrap .charac_head .face .eyes .right span {
-    transform: translate(-30%, 20%);
-  }
-  .con1 .character .charac_wrap .charac_head .face .lips {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    transform: translateY(-40%);
-  }
-  .con1 .character .charac_wrap .charac_head .face .lips span {
-    width: 5%;
-    height: 30%;
-
-    border-radius: 50%;
-    background: #000;
-    display: block;
-  }
-  .con1 .character .charac_wrap.on .charac_head .face .lips span {
-    height: 10%;
-    transition: 0.2s;
-  }
-
-  /* charac_body */
-  .con1 .character .charac_wrap .charac_body {
-    width: 170px;
-    height: 300px;
-
-    border: 3px solid #000;
-    border-top-left-radius: 90px;
-    border-top-right-radius: 90px;
-    background: #fff;
-
-    position: absolute;
-    bottom: 13%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .con1.on .character .charac_wrap .charac_body {
-    animation: con1_charac_body 1.5s linear infinite;
-  }
-  @keyframes con1_charac_body {
-    0% {
-      bottom: 13%;
-    }
-    50% {
-      bottom: 11%;
-    }
-    100% {
-      bottom: 13%;
-    }
-  }
-
-  /* charac_hand */
-  .con1 .character .charac_hand {
-    width: 120%;
-    height: 100%;
-
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .con1 .character .charac_wrap.on .charac_hand .right_hand {
-    animation: charac_clcik_righthand 0.2s linear infinite;
-  }
-  @keyframes charac_clcik_righthand {
-    0% {
-      transform: translate(-50%, -50%);
-    }
-    50% {
-      transform: translate(30%, -50%);
-    }
-    100% {
-      transform: translate(-50%, -50%);
-    }
-  }
-  .con1 .character .charac_wrap.on .charac_hand .left_hand {
-    animation: charac_clcik_lefthand 0.2s linear infinite;
-  }
-  @keyframes charac_clcik_lefthand {
-    0% {
-      transform: translate(-50%, -50%);
-    }
-    50% {
-      transform: translate(-30%, -50%);
-    }
-    100% {
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .con1 .character .charac_hand .left_hand {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid #000;
-    background: #fff;
-    display: block;
-
-    position: absolute;
-    top: 30%;
-    left: 0%;
-    transform: translate(-100%, 0%);
-  }
-  .con1 .character .charac_hand .right_hand {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid #000;
-    background: #fff;
-    display: block;
-
-    position: absolute;
-    top: 30%;
-    right: 0%;
-    transform: translate(100%, 0%);
-  }
-
-  /* charac_foot */
-  .con1 .character .charac_wrap .charac_foot {
-    width: 170px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .con1 .character .charac_wrap .charac_foot .footLeft {
-    width: calc(100% / 2 - 5%);
-    height: 100%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-
-    background: #fff;
-    border: 3px solid #000;
-  }
-  .con1 .character .charac_wrap.on .charac_foot .footLeft {
-    animation: charac_footLeft 0.2s linear infinite;
-  }
-  @keyframes charac_footLeft {
-    0% {
-      transform: translateY(0%);
-    }
-    50% {
-      transform: translateY(-70%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-
-  .con1 .character .charac_wrap .charac_foot .footRight {
-    width: calc(100% / 2 - 5%);
-    height: 100%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-
-    background: #fff;
-    border: 3px solid #000;
-  }
-  .con1 .character .charac_wrap.on .charac_foot .footRight {
-    animation: charac_footRight 0.2s linear infinite;
-  }
-  @keyframes charac_footRight {
-    0% {
-      transform: translateY(-70%);
-    }
-    50% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(-70%);
-    }
-  }
-
   /* con1 mouse */
   .con1 .mouse {
     width: 50%;
@@ -1416,8 +1076,8 @@ a {
     height: 10%;
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
   }
   .con3 .inner .txtwrap .con3_nav li {
     width: 30%;
@@ -1521,6 +1181,26 @@ a {
     color: #2fa3f7;
     background: #001d34;
     border-color: #2fa3f7;
+  }
+  .con3 .inner .con3_site li .skills .skill_figma {
+    color: #fff;
+    background: linear-gradient(to top left, #ffa023 80%, #ffcb87 80%);
+    border-color: #ffcb87;
+  }
+  .con3 .inner .con3_site li .skills .skill_gsap {
+    color: #fff;
+    background: linear-gradient(to top left, #15c91e 80%, #73f179 80%);
+    border-color: #73f179;
+  }
+  .con3 .inner .con3_site li .skills .skill_scss {
+    color: #fff;
+    background: linear-gradient(to top left, #b71ecf 80%, #f3acfe 80%);;
+    border-color: #f3acfe;
+  }
+  .con3 .inner .con3_site li .skills .skill_chart {
+    color: #fff;
+    background: linear-gradient(to top left, #ff4d62 80%, #ff8997 80%);;
+    border-color: #ff8997;
   }
 
   /* con3 conwrap */
