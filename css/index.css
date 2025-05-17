@@ -23,7 +23,7 @@ a {
   section {
     width: 100%;
   }
-  section:not(:first-of-type){
+  section:not(:first-of-type) {
     margin-top: 120px;
   }
 
@@ -503,33 +503,6 @@ a {
     margin-bottom: 20px;
   }
 
-  .con1 .circle .lineWhite {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    border-left: 15px solid #fff;
-  }
-  .con1 .circle .lineWhite > div {
-    width: 200%;
-    height: 100%;
-    border: 15px solid #fff;
-    border-radius: 0% 50% 50% 0%;
-
-    position: absolute;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  .con1 .circle .lineWhite > span {
-    width: calc(100% / 8 - 4%);
-    height: 100%;
-    display: block;
-
-    /* background: rgb(255, 187, 62); */
-  }
 
   /* con1 txtwrap */
   .con1 .txtwrap {
@@ -1448,7 +1421,7 @@ a {
   }
   .con3 .inner .txtwrap .con3_nav li {
     width: 30%;
-    padding:5px 0;
+    padding: 5px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1528,6 +1501,11 @@ a {
     color: #fff;
     background: linear-gradient(to top left, #159cd5 75%, #7bddff 75%);
     border-color: #7bddff;
+  }
+  .con3 .inner .con3_site li .skills .skill_js {
+    color: #fff;
+    background: linear-gradient(to top left, #ed9911 80%, #ffc62a 80%);
+    border-color: #ffc62a;
   }
   .con3 .inner .con3_site li .skills .skill_jquery {
     color: #fff;
@@ -1679,7 +1657,7 @@ a {
     height: 100%;
     max-width: 1600px;
     max-height: 80%;
-    margin:0 auto;
+    margin: 0 auto;
     display: flex;
 
     position: relative;
